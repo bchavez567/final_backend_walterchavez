@@ -9,6 +9,6 @@ const errorMiddleware = (error, req, res, next) => {
     };
     const errorResponse = apiFailedResponse(errorItem, status);
     return res.status(status).json(errorResponse);
-}
+    };
 
 module.exports = errorMiddleware;
