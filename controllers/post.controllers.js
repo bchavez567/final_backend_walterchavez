@@ -6,6 +6,9 @@ class PostControllers {
 
     constructor () {
         this.service = new PostServices();
+        this.getPostsController = this.getPostsController.bind(this);
+        this.getPostByIdController = this.getPostByIdController.bind(this);
+        this.createPostController = this.createPostController.bind(this);
     }
 
     async getPostsController (req, res , next){

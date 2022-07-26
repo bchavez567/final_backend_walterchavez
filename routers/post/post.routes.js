@@ -1,11 +1,12 @@
 const { Router} = require('express');
 const PostControllers = require('../../controllers/post.controllers');
+const PostServices = require('../../services/post/post.services');
 
 const router = Router();
 
 class PostRoutes {
     constructor () {
-        this.controller = new PostControllers();
+        this.controller = new PostControllers(new PostServices);
     }
 
     initialize(prefix = ""){
